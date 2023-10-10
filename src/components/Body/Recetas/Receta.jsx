@@ -15,7 +15,11 @@ const Receta = () => {
       //.get("http://localhost:3030/recetas")
       .get("https://app-recetas-reactjs-4qhkpgmi6-ale10l.vercel.app/recetas")
       .then((response) => {
-        setRecetas(response.data);
+        if (Array.isArray(response.data)) {
+          setRecetas(response.data);
+        } else {
+          console.error("La respuesta de la API no es un arreglo válido: ", response.data)
+        }
       })
       .catch((error) => {
         alert("Error al traer los datos de las recetas");
