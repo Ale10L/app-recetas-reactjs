@@ -64,7 +64,7 @@ const Receta = () => {
       </h2>
       <button onClick={agregarReceta}>Agregar receta</button>
       <ul>
-        {console.log(recetas)}
+        {console.log("Tipo de recetas: ", typeof recetas)}
         {recetas.map((re, index) => {
           return (
             <li key={index}>
