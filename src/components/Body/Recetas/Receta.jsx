@@ -13,7 +13,7 @@ const Receta = () => {
   const obtenerRecetas = () => {
     axios
       //.get("http://localhost:3030/recetas")
-      .get("https://app-recetas-reactjs-4qhkpgmi6-ale10l.vercel.app/recetas")
+      .get("https://app-recetas-reactjs.vercel.app/recetas")
       .then((response) => {
         setRecetas(response.data);
       })
@@ -33,7 +33,7 @@ const Receta = () => {
     axios
       //.post("http://localhost:3030/recetas", receta)
       .post(
-        "https://app-recetas-reactjs-4qhkpgmi6-ale10l.vercel.app/recetas",
+        "https://app-recetas-reactjs.vercel.app/recetas",
         receta
       )
       .then(() => {
