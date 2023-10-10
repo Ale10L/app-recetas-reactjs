@@ -64,6 +64,7 @@ const Receta = () => {
       </h2>
       <button onClick={agregarReceta}>Agregar receta</button>
       <ul>
+        {console.log(recetas)}
         {recetas.map((re, index) => {
           return (
             <li key={index}>

@@ -132,6 +132,7 @@ const Foto = () => {
         value={id_receta}
       >
         <option>Seleccione una receta</option>
+        {console.log(recetas)}
         {recetas.map((receta, index) => {
           return(
           <option key={index} value={receta.id}>
@@ -141,6 +142,7 @@ const Foto = () => {
       </select>
       <button onClick={guardarFoto}>Crear</button>
       <ul>
+        {console.log(fotos)}
         {fotos.map((photo, index) => (
           <li key={index}>
             {photo.id} - {photo.nombre_foto}: {photo.id_receta}{" "}
