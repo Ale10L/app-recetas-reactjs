@@ -7,6 +7,10 @@
     {
       "id": 2,
       "nombre_receta": "Ñoquis"
+    },
+    {
+      "id": 3,
+      "nombre_receta": "Pollo a la parrilla"
     }
   ],
   "fotos": [
@@ -14,6 +18,11 @@
       "id": 1,
       "nombre_foto": "Alta foto ñoquis",
       "id_receta": "2"
+    },
+    {
+      "id": 2,
+      "nombre_foto": "Alta de foto de pollo a la parrilla",
+      "id_receta": "3"
     }
   ]
 }

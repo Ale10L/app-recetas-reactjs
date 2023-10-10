@@ -26,7 +26,8 @@ const Foto = () => {
 
   const obtenerRecetas = () => {
     axios
-      .get("http://localhost:3030/recetas")
+      //.get("http://localhost:3030/recetas")
+      .get("https://app-recetas-reactjs.vercel.app/recetas")
       .then((response) => {
         setRecetas(response.data);
       })
@@ -37,7 +38,8 @@ const Foto = () => {
 
   const obtenerFotos = () => {
     axios
-      .get("http://localhost:3030/fotos")
+      //.get("http://localhost:3030/fotos")
+      .get("https://app-recetas-reactjs.vercel.app/fotos")
       .then((response) => {
         setFotos(response.data);
       })
@@ -52,7 +54,8 @@ const Foto = () => {
         throw new Error("Debe seleccionar una receta");
       } else {
         axios
-          .post("http://localhost:3030/fotos", foto)
+          //.post("http://localhost:3030/fotos", foto)
+          .post("https://app-recetas-reactjs.vercel.app/fotos", foto)
           .then(() => {
             alert("Se creó la foto de la receta");
             obtenerFotos();
@@ -73,7 +76,8 @@ const Foto = () => {
       } else {
         if (idFoto) {
           axios
-            .put(`http://localhost:3030/fotos/${idFoto}`, foto)
+            //.put(`http://localhost:3030/fotos/${idFoto}`, foto)
+            .put(`https://app-recetas-reactjs.vercel.app/fotos/${idFoto}`, foto)
             .then(() => {
               alert("Se editó la foto de la receta");
               obtenerFotos();
@@ -91,7 +95,8 @@ const Foto = () => {
   const eliminarFoto = (idFoto) => {
     if (idFoto) {
       axios
-        .delete(`http://localhost:3030/fotos/${idFoto}`)
+        //.delete(`http://localhost:3030/fotos/${idFoto}`)
+        .delete(`https://app-recetas-reactjs.vercel.app/fotos/${idFoto}`)
         .then(() => {
           alert("Se elimino la foto");
           obtenerFotos();
