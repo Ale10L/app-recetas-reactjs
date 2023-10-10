@@ -12,8 +12,8 @@ const Receta = () => {
 
   const obtenerRecetas = () => {
     axios
-      //.get("http://localhost:3030/recetas")      
-      .get("https://app-recetas-reactjs-4qhkpgmi6-ale10l.vercel.app/recetas")      
+      //.get("http://localhost:3030/recetas")
+      .get("https://app-recetas-reactjs-4qhkpgmi6-ale10l.vercel.app/recetas")
       .then((response) => {
         setRecetas(response.data);
       })
@@ -31,15 +31,18 @@ const Receta = () => {
 
   function agregarReceta() {
     axios
-    //.post("http://localhost:3030/recetas", receta)
-    .post("https://app-recetas-reactjs-4qhkpgmi6-ale10l.vercel.app/recetas", receta)
-    .then(() => {
-      alert("Se creó la receta");
-      obtenerRecetas();
-    })
-    .catch((error) => {
-      alert("Error al guardar la receta");
-    });
+      //.post("http://localhost:3030/recetas", receta)
+      .post(
+        "https://app-recetas-reactjs-4qhkpgmi6-ale10l.vercel.app/recetas",
+        receta
+      )
+      .then(() => {
+        alert("Se creó la receta");
+        obtenerRecetas();
+      })
+      .catch((error) => {
+        alert("Error al guardar la receta");
+      });
   }
 
   useEffect(() => {
@@ -61,11 +64,13 @@ const Receta = () => {
       </h2>
       <button onClick={agregarReceta}>Agregar receta</button>
       <ul>
-        {recetas.map((re, index) => (
-          <li key={index}>
-            {re.id} - {re.nombre_receta}
-          </li>
-        ))}
+        {recetas.map((re, index) => {
+          return (
+            <li key={index}>
+              {re.id} - {re.nombre_receta}
+            </li>
+          );
+        })}
       </ul>
     </div>
   );

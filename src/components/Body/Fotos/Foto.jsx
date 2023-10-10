@@ -132,11 +132,12 @@ const Foto = () => {
         value={id_receta}
       >
         <option>Seleccione una receta</option>
-        {recetas.map((receta, index) => (
+        {recetas.map((receta, index) => {
+          return(
           <option key={index} value={receta.id}>
             {receta.id} - {receta.nombre_receta}
           </option>
-        ))}
+        )})}
       </select>
       <button onClick={guardarFoto}>Crear</button>
       <ul>
