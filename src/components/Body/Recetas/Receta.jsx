@@ -5,7 +5,7 @@ import axios from "axios";
 const Receta = () => {
   const [receta, setReceta] = useState({ id: 0, nombre_receta: "" });
   const [recetas, setRecetas] = useState([]);
-
+  let lista_recetas = []
   const { nombre_receta } = receta;
 
   //const { idReceta } = useParams();
@@ -15,6 +15,7 @@ const Receta = () => {
       //.get("http://localhost:3030/recetas")
       .get("https://app-recetas-reactjs.vercel.app/recetas")
       .then((response) => {
+        lista_recetas.push(response.data)
         if (Array.isArray(response.data)) {
           setRecetas(response.data);
         } else {
@@ -69,7 +70,7 @@ const Receta = () => {
       <button onClick={agregarReceta}>Agregar receta</button>
       <ul>
         {console.log("Tipo de recetas: ", typeof recetas)}
-        {recetas.map((re, index) => {
+        {lista_recetas.map((re, index) => {
           return (
             <li key={index}>
               {re.id} - {re.nombre_receta}
