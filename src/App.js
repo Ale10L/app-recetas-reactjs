@@ -1,11 +1,14 @@
 import './App.css';
+import Header from './components/Header/Header';
+import './fuentes/Lemon-Regular.ttf'
 
-function App() {
+function App({ children }) {
   return (
-    <div className="App">
-      <header className="App-header">
-        
+    <div className="">
+      <header className=''>
+        <Header />
       </header>
+      <footer>Acá viene el footer</footer>
     </div>
   );
 }

@@ -1,0 +1,19 @@
+{
+  "recetas": [
+    {
+      "id": 1,
+      "nombre_receta": "Tallarines"
+    },
+    {
+      "id": 2,
+      "nombre_receta": "Ñoquis"
+    }
+  ],
+  "fotos": [
+    {
+      "id": 1,
+      "nombre_foto": "Alta foto ñoquis",
+      "id_receta": "2"
+    }
+  ]
+}
