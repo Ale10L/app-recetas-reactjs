@@ -16,12 +16,17 @@
   "fotos": [
     {
       "id": 1,
+      "nombre_foto": "Alta foto tallarines",
+      "id_receta": "1"
+    },
+    {
+      "id": 2,
       "nombre_foto": "Alta foto ñoquis",
       "id_receta": "2"
     },
     {
-      "id": 2,
-      "nombre_foto": "Alta de foto de pollo a la parrilla",
+      "id": 3,
+      "nombre_foto": "Alta foto pollo a la parrilla",
       "id_receta": "3"
     }
   ]
