@@ -12,8 +12,8 @@ const Receta = () => {
 
   const obtenerRecetas = () => {
     axios
-      //.get("http://localhost:3030/recetas")
-      .get("https://app-recetas-reactjs.vercel.app/recetas")
+      .get("http://localhost:3030/recetas")
+      //.get("https://app-recetas-reactjs.vercel.app/recetas")
       .then((response) => {
         setRecetas(response.data);
       })
@@ -31,11 +31,8 @@ const Receta = () => {
 
   function agregarReceta() {
     axios
-      //.post("http://localhost:3030/recetas", receta)
-      .post(
-        "https://app-recetas-reactjs.vercel.app/recetas",
-        receta
-      )
+      .post("http://localhost:3030/recetas", receta)
+      //.post("https://app-recetas-reactjs.vercel.app/recetas", receta)
       .then(() => {
         alert("Se creó la receta");
         obtenerRecetas();
